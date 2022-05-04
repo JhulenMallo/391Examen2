@@ -3,15 +3,24 @@
     <style>
         .container {
             display: flex;
-            flex-wrap: wrap;
+            justify-content: space-evenly;
         }
         .nombres {
             /* border: 2px solid red; */
             flex-basis: 25%;
+            margin-left: 5%;
         }
         .reglas {
             /* border: 2px solid blue; */
             flex-basis: 25%;
+            margin-right: 5%;
+        }
+        .medio {
+            
+            margin: 0 auto;
+            flex-basis: 45%;
+            display: flex;
+            justify-content: center;
         }
         .texto-vertical-2 {
 
@@ -26,6 +35,9 @@
         }
         .texto {
             text-align: center;
+        }
+        #canvas {
+            border: 2px solid black;
         }
     </style>
 <head>
@@ -49,8 +61,8 @@
                 <li>Jhulen Mauricio Mallo Quispe</li>
             </ul>
         </div>
-        <div style="width: 506.5px; height: 506.5px; border: 2px solid black; margin: 0 auto; flex-basis: 47%;">
-            <canvas width="500" height="500" style="border: 3px solid black" id="canvas"></canvas>
+        <div class="medio">
+            <canvas width="500" height="500" id="canvas"></canvas>
         </div>
         <div class="reglas">
             Reglas:
