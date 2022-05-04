@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .nombres {
+            /* border: 2px solid red; */
+            flex-basis: 25%;
+        }
+        .reglas {
+            /* border: 2px solid blue; */
+            flex-basis: 25%;
+        }
+        .texto-vertical-2 {
+
+            writing-mode: vertical-lr;
+            transform: rotate(220deg);
+            font-size: 10px;
+            margin: 180px auto -330px auto;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none; 
+        }
+        .texto {
+            text-align: center;
+        }
+    </style>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automatas Celulares</title>
+</head>
+<body>
+    <h1 class="texto">SIMULACIÓN DE INCENDIOS FORESTALES</h1>
+    <h2 class="texto">Autómatas Celulares</h2>
+    <h3 class="texto">CASO DE ESTUDIO: BOSQUECILLO DE PURA PURA</h3>
+    <div class="texto-vertical-2">Autopista Heroes de la Guerra del Chaco</div>
+    
+    <div class="container">
+        <div class="nombres">
+            Miembros del grupo:
+            <ul>
+                <li>Rossie Jashiel Gutierrez Sardinas</li>
+                <li>Daniel Horacio Fernandez Garcia</li>
+                <li>Jhulen Mauricio Mallo Quispe</li>
+            </ul>
+        </div>
+        <div style="width: 506.5px; height: 506.5px; border: 2px solid black; margin: 0 auto; flex-basis: 47%;">
+            <canvas width="500" height="500" style="border: 3px solid black" id="canvas"></canvas>
+        </div>
+        <div class="reglas">
+            Reglas:
+            <ul>
+                <li>Regla 1:</li>
+                <li>Regla 2:</li>
+                <li>Regla 3:</li>
+                <li>Regla 4:</li>
+                <li>Regla 5:</li>
+            </ul>
+        </div>
+    </div>
+    <script src="propv2.js"></script>
+</body>
+</html>
