@@ -106,19 +106,6 @@ class Automata {
     llamas() {
         this.cells[Math.ceil(xdaf)][Math.ceil(ydaf)] = 2;
         // console.log(xdaf, ydaf);
-
-        for (let x = 1; x < this.size - 1; x++) {
-            for (let y = 1; y < this.size - 1; y++) {
-                if (this.cells[x][y] == 0)
-                    this.ctx.fillStyle = "green"
-                if (this.cells[x][y] == 1)
-                    this.ctx.fillStyle = "grey";
-                if (this.cells[x][y] == 2)
-                    this.ctx.fillStyle = "red";
-
-                this.ctx.fillRect(x, y, 1, 1);
-            }
-        }
     }
 
     evaluate() {
@@ -186,5 +173,5 @@ function getCursorPosition(canvas, event) {
     const y = event.clientY - rect.top
     xdaf=x;
     ydaf=y;
-    // console.log("x: " + x + " y: " + y)
+    console.log("x: " + x + " y: " + y)
 }
