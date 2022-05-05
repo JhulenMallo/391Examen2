@@ -103,7 +103,7 @@ class Automata {
         
     }
 
-    color() {
+    llamas() {
         this.cells[Math.ceil(xdaf)][Math.ceil(ydaf)] = 2;
         // console.log(xdaf, ydaf);
 
@@ -136,10 +136,12 @@ class Automata {
                     this.ctx.fillStyle = "red";
                 //quemado
                 if (this.cells[x][y] == 3)
-                    this.ctx.fillStyle = 'yellow';
+                    this.ctx.fillStyle = '#FF7306';
                 this.ctx.fillRect(x, y, 1, 1);
 
 
+                if (this.cells[x][y] == 2) cellsAux[x][y] = 3
+                else{
                 if (this.cells[x][y] == 0) {
                     //arriba izq
                     if (this.cells[x - 1][y - 1] == 2) cellsAux[x][y] = 2
@@ -158,10 +160,7 @@ class Automata {
                     //abajo der
                     if (this.cells[x + 1][y + 1] == 2) cellsAux[x][y] = 2
                 }
-
-                if (this.cells[x][y] == 1) cellsAux[x][y] == 1
-
-                if (this.cells[x][y] == 2) cellsAux[x][y] == 3
+            }
             }
         }
         this.cells = cellsAux;
@@ -178,7 +177,7 @@ setInterval(() => Automata1.evaluate(), 1000);
 
 canvas.addEventListener('mousedown', function(e) {
     getCursorPosition(canvas, e);
-    Automata1.color();
+    Automata1.llamas();
 })
 
 function getCursorPosition(canvas, event) {
